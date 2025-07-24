@@ -4,6 +4,3 @@ __pycache__/
 
 # Ignore virtual environment
 venv/
-
-# Ignore environment files (if you use them for secrets)
-.env
