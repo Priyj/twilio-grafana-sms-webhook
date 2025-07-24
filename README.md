@@ -7,17 +7,17 @@ This project is a **Flask-based webhook service** that integrates **Grafana aler
 ## **Project Structure**
 
 .
-├── main.py
-├── sms_webhook.py
-├── handle_cpu_alert.py
-├── handle_ram_alert.py
-├── handle_storage_alert.py
-├── handle_temp_alert.py
-├── utils.py
-├── config.py
-├── test.py
-├── requirements.txt
-└── .gitignore
+├── main.py            
+├── sms_webhook.py        
+├── handle_cpu_alert.py    
+├── handle_ram_alert.py    
+├── handle_storage_alert.py    
+├── handle_temp_alert.py    
+├── utils.py    
+├── config.py    
+├── test.py    
+├── requirements.txt    
+└── .gitignore    
 
 - **main.py** – Starts FastAPI app including sms_webhook routes  
 - **sms_webhook.py** – Flask app with `/sms` endpoint to process and route alerts  
