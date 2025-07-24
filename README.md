@@ -6,7 +6,7 @@ This project is a **Flask-based webhook service** that integrates **Grafana aler
 
 ## **Project Structure**
 
-.
+.    
 ├── main.py            
 ├── sms_webhook.py        
 ├── handle_cpu_alert.py    
