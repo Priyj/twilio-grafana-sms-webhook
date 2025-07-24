@@ -30,43 +30,45 @@ This project is a **Flask-based webhook service** that integrates **Grafana aler
 
 ---
 
-## **Setup**
-
-### **1. Clone the repository**
-
-```bash
+## Setup
+1. Clone the repository
+```
 git clone https://github.com/Priyj/twilio-grafana-sms-webhook.git
 cd twilio-grafana-sms-webhook
+```
+
 2. Create a virtual environment
-bash
-Copy
-Edit
+```
 python3 -m venv venv
 source venv/bin/activate
+```
+
 3. Install dependencies
-bash
-Copy
-Edit
+```
 pip install -r requirements.txt
+```
+
 4. Configure Twilio credentials
 Edit config.py with your Twilio account details:
 
-python
-Copy
-Edit
+```
 TWILIO_ACCOUNT_SID = 'your_account_sid'
 TWILIO_AUTH_TOKEN = 'your_auth_token'
 TWILIO_FROM_NUMBER = '+1234567890'
 TWILIO_TO_NUMBER = [
-    "+19876543210",
-    "+10987654321",
+"+19876543210",
+"+10987654321",
 ]
+```
+
 Tip: For production, use environment variables instead of hardcoded credentials.
 
-Running the Webhook Service
-Start the Flask app
+5. Running the Webhook Service
+Start the Flask app:
 
+```
 python sms_webhook.py
+```
 
 The service will run and expose:
 
@@ -76,29 +78,28 @@ GET / – Health check page
 
 GET /health – Returns service health status JSON
 
-Testing SMS functionality
+## Testing SMS functionality
 Run:
 
-bash
-Copy
-Edit
+```
 python test.py
+```
+
 This sends a test SMS to configured recipients to validate integration.
 
-Integrating with Grafana
+## Integrating with Grafana
 Set up a Webhook contact point in Grafana.
 
 Point it to your server’s /sms endpoint URL.
 
 Alerts will be parsed by their grafana_folder label and routed to respective handlers.
 
-Security Note
+## Security Note
 Do not commit secrets in public repos.
 
 Rotate your Twilio credentials if accidentally pushed.
 
-Secure your webhook endpoint with IP filtering or auth if exposed publicly.
+Secure your webhook endpoint with IP filtering or authentication if exposed publicly.
 
-
-Contributions
+## Contributions
 Pull requests and suggestions are welcome to enhance alert parsing and security.
