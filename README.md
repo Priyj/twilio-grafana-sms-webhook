@@ -26,7 +26,7 @@ This project is a **Flask-based webhook service** that integrates **Grafana aler
 - **config.py** – Stores Twilio credentials and recipient numbers  
 - **test.py** – Quick test script to send an SMS  
 - **requirements.txt** – Python dependencies  
-- **.gitignore** – Ignores venv, pycache, and env files
+- **.gitignore** – Ignores venv, pycache
 
 ---
 
